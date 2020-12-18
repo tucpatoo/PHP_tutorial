@@ -21,7 +21,7 @@
         </p>
         <p>
             <label>E-mail address:</label>
-            <input id="fullname" name="name" type="text" placeholder="Enter your email address" size="50">
+            <input id="fullname" name="name" type="email" placeholder="Enter your email address" size="50">
         </p>
         <p>
             <label>Gender:</label>
@@ -45,12 +45,12 @@
         <p>
             <label>Name:</label>
             <input name="name" type="text" size="50">
-            <label>Quantity (Maximum 5):</label>
-            <input type="number" min="1" max="5">
+            <label for="quantity">Quantity (Maximum 5):</label>
+            <input type="number" id="quanlity" name="quanlity" min="1" max="5">
         </p>
     </fieldset>
-    <input type="button" value="Submit">
-    <input type="button" value="Reset">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
     </form>
 </body>
 </html>
