@@ -1,0 +1,192 @@
+ 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai html</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        }
+        header{
+            font-family: 'Lora' ,SansSerif;
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)) , url("Meterial/header.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            background-position:center;
+            height: 600px;
+            margin: auto;
+        }
+        .header-title{
+            font-size: 60px;
+        }
+        .head{
+            padding: 20px;
+            position: relative;
+        }
+        .head1{
+            font-size: 40px;
+            color: white;
+        }
+        .nav-bar{
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .nav-bar li{
+            display: inline;
+            color: white;
+            margin: 15px;
+            cursor: pointer;
+        }
+        #active{
+            border: 1px solid white;
+            border-radius: 100px;
+            padding: 10px 15px;
+        }
+        #active:hover{
+            color: black;
+            background: white;
+            transition: 0.6s;
+        }
+        .middle-header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 20%;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        h3{
+            font-style: italic;
+            margin: 10px;
+        }
+        h1{
+            font-size: 52px;
+        }
+        #btn{
+            padding: 15px;
+            background: rgb(54, 179, 168);
+            color: white;
+            border: none;
+            border-radius: 20px;
+        }
+        #btn:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    
+        main{
+            margin: 100px 125px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .text-content{
+            margin-bottom: 125px;
+            text-align: center;
+        }
+        .text-content .title{
+            font-size: 36px;
+            font-weight:bold;
+            line-height: 36px
+        }
+        .text-content .describe{
+            margin-top: 12px;
+        }
+        .image li{
+            width: 49%;
+            display: inline-table;
+        }
+        img{
+            width: 100%;
+        }
+        .box{
+            padding: 20px;
+        }
+        .img-caption{
+            font-size: 20px;
+            margin: 24px auto;
+            text-align: center;
+            color: rgb(61, 153, 145);
+        }
+        .img-describe{
+            text-align: center;
+            line-height: 36px;
+        }   
+        footer{
+            padding: 75px;
+            text-align: center;
+            background: rgb(31 31 31);
+            color: white;
+        }
+        .unsans{
+            font-family: sans-serif;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="head">
+        <div class="head1">CS 193x</div>
+        <div class="nav-bar">
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>NEWS</li>
+                <li>READ ME</li>
+                <li id="active">TAKE ACTION</li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-header">
+        <h3>Suntainability</h3>
+        <p class="header-title">START WITH YOU</p>
+        <button id="btn">LEARN MORE</button>
+    </div>
+</header>
+<main>
+    <div class="text-content">
+        <h2>We coserve land thought outreach, restoration, and research.</h2>
+        <p class="describe">Some of the Earth's greatest landscapes are theartend bt increased road<br>
+            contruction, oli and gas exploration, and mining. We ain to protect these areas from<br>
+            inapproiate development, but we cannot achieve our goals alone. Find out how<br>
+            can help</p>
+    </div>
+    <div class="image">
+        <ul>
+            <li>
+                <div class="box">
+                    <img src="Meterial/body-image-1.jpg">
+                    <p class="img-caption">ABOUT</p>
+                    <p class="img-describe">Find out about our organization, mission, our methods, and the
+                        results or our decades of advocary.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <img src="Meterial/body-image-2.jpg">
+                    <p class="img-caption">TAKE ACTION</p>
+                    <P class="img-describe">Ready to take the next step? You can become a contributor to
+                        our cause, or paticipate yourself.</P>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+<footer>
+    <p class="unsans">CS193X, SHRIAM CENTER 104</p>
+    <p class="sans">Powered by competence</p>
+</footer>
+</body>
+</html>
+
