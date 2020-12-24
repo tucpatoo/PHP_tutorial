@@ -4,75 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bai 3</title>
+    <style>
+        textarea{
+            height: 60px;
+            width: 320px;
+        }
+        a{
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <form>
-    <h1>Application for permission to date my daughter</h1>
-    <p><b>Note:</b> Form is to be completed at least 21 days prior to date</p>
-    <fieldset>
-        <legend>Personal Details</legend>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter name here"><br/>
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" placeholder="Enter address here"><br/>
-        <label for="mail">Email</label>
-        <input type="email" id="mail" name="mail" placeholder="Enter email here"><br/>
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone" name="phone" placeholder="Enter 10 digit number"><br/>
-        <label>IQ</label>
-        <input type="number" placeholder="Enter IQ here"><br/>
-        <label>Gender</label><br/>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br/>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br/>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label><br/>
-        <label for="date">Date of Proposed Outing: </label>
-        <input type="date" id="date" name="date">
-    </fieldset>
-    <fieldset>
-        <p>Check All That Apply</p>
-        <input type="checkbox">
-        <label>I have tattoos and/or piercings</label><br/>
-        <input type="checkbox">
-        <label>I am more than 2 years older than my daughter</label><br/>
-        <input type="checkbox">
-        <label>I own a panel van or V8 ute</label><br/>
-        <input type="checkbox">
-        <label>I work full-time</label><br/>
-        <input type="checkbox">
-        <label>My parents are rich</label><br/>
-        <input type="checkbox">
-        <label>Is the date at a well lit public location</label>
-    </fieldset>
-    <fieldset>
-        <p>Political Persuasion:
-        <select>
-            <option>Left Wing</option>
-            <option>Right Wing</option>
-            <option>Conservative</option>
-            <option>Nazi</option>
-        </select>
-        Education Level COmpleted: 
-        <select>
-            <option>University</option>
-            <option>College</option>
-            <option>High School</option>
-            <option>None</option>
-        </select></p>
-    </fieldset>
-    <fieldset>
-        <legend>Essay Section</legend>
-        <p>In 50 words or more explan why you want to date my daughter</p>
-        <textarea name="message" placeholder="Enter Text Here" style="height: 60px; width: 320px;"></textarea><br/>
-        <p>Please upload contact details for 2 references</p><br/>
-        <textarea name="message" placeholder="Enter Text Here" style="height: 60px;width: 320px;"></textarea><br/>
-        <p>Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:
-            <input type="file" value="Choose File">
-        </p>
-    </fieldset>
-    <input type="button" value="Send your application">
+        <h1>Application for permission to date my daughter</h1>
+        <p><a>Note:</a> Form is to be completed at least 21 days prior to date</p>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter name here"><br/>
+            <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter address here"><br/>
+            <label for="mail">Email</label>
+                <input type="email" id="mail" name="mail" placeholder="Enter email here"><br/>
+            <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter 10 digit number"><br/>
+            <label>IQ</label>
+                <input type="number" placeholder="Enter IQ here"><br/>
+            <label>Gender</label><br/>
+                <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br/>
+                <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br/>
+                <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br/>
+            <label for="date">Date of Proposed Outing: </label>
+                <input type="date" id="date" name="date">
+        </fieldset>
+        <fieldset>
+            <p>Check All That Apply</p>
+                <input type="checkbox">
+            <label>I have tattoos and/or piercings</label><br/>
+                <input type="checkbox">
+            <label>I am more than 2 years older than my daughter</label><br/>
+                <input type="checkbox">
+            <label>I own a panel van or V8 ute</label><br/>
+                <input type="checkbox">
+            <label>I work full-time</label><br/>
+                <input type="checkbox">
+            <label>My parents are rich</label><br/>
+                <input type="checkbox">
+            <label>Is the date at a well lit public location</label>
+        </fieldset>
+        <fieldset>
+            <p>Political Persuasion:
+            <select>
+                <option>Left Wing</option>
+                <option>Right Wing</option>
+                <option>Conservative</option>
+                <option>Nazi</option>
+            </select>
+            Education Level COmpleted: 
+            <select>
+                <option>University</option>
+                <option>College</option>
+                <option>High School</option>
+                <option>None</option>
+            </select></p>
+        </fieldset>
+        <fieldset>
+            <legend>Essay Section</legend>
+            <p>In 50 words or more explan why you want to date my daughter</p>
+                <textarea name="message" placeholder="Enter Text Here"></textarea><br/>
+            <p>Please upload contact details for 2 references</p><br/>
+                <textarea name="message" placeholder="Enter Text Here"></textarea><br/>
+            <p>Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:
+                <input type="file" value="Choose File">
+            </p>
+        </fieldset>
+            <input type="button" value="Send your application">
     </form>
 </body>
 </html>
