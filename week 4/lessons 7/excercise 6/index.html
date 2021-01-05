@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 6</title>
+    <style>
+        body{
+            border: 10px solid blue;
+            width: 30%;
+            height: 500px;
+            margin: auto;
+        }
+        .container{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        #head{
+            text-align: center;
+            border-bottom: 1px solid #c7adad;
+            line-height: 0.1em;
+            margin-top: 30px;
+            color: #b9a9a9;
+        }
+        #head span{
+            background:#fff;
+            padding: 1px 10px;
+        }
+        .img{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .img p{
+            margin-top: 20px;
+        }
+        .information a{
+            color: red;
+        }
+        .information input{
+            width: 100%;
+            height: 30px;
+            background-color: rgb(231, 221, 227);
+            border: 1px solid blue;
+        }
+        .forget_pass{
+            float: right;
+        }
+        .auto_login{
+            margin-top: 20px;
+        }
+        .login button{
+            background-color: rgb(83, 83, 202);
+            border: none;
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            margin-top: 20px;
+        }
+        .footer button{
+            background-color: white ;
+            border: 1px solid blue;
+            margin-top: 20px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="head"><span>Đăng nhập với</span></div>
+        <div class="img">
+            <img src="fb.PNG">
+            <img src="gg.PNG">
+            <img src="phone.PNG">
+            <p id="head"><span>Hoặc </span></p>
+        </div>
+        <div class="information">
+            <p>Email <a>*</a></p>
+            <input type="email" id="mail" name="email">
+            <p>Mật khẩu <a>*</a></p>
+            <input type="password" id="pass" name="password"><br/>
+        </div>
+        <div class="auto_login ">
+            <input type="checkbox" id="check" name="login">Tự động đăng nhập <a class="forget_pass">Quên mật khẩu?</a>
+        </div>
+        <div class="login">
+            <button>Đăng nhập</button>
+        </div>
+        <div id="head"><span>Bạn chưa có tài khoản?</span></div>
+        <div class="footer">
+            <button>ĐĂNG KÝ NHANH</button>
+        </div>
+    </div>
+</body>
+</html>
