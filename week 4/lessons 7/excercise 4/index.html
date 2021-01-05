@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
+    <style>
+        .container{
+            margin: auto;
+            background: #b49ce2;
+            padding: 10px;
+            min-width: 360px;
+        }
+        .title{
+            text-align: center;
+            font-size: 20px;
+            margin: 12px;
+        }
+        .note{
+            margin: 10px;
+            font-size: 14px;
+        }
+        .sign_up form fieldset{
+            border: none;
+        }
+        .information input{
+            padding: 5px;
+            width: 99%;
+            margin: 3px 0;
+            border: 1px solid #bbb6ac;
+            border-radius: 6px;
+        }
+        .choose_gender{
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+        .choose_gender .col-40 {
+            width: 40%;
+        }
+        .gender{
+            width: 25%;
+        }
+        .alert{
+            display: none;
+            font-size: 12px;
+        }
+        textarea{
+            padding: 5px;
+            width: 99%;
+            margin: 3px 0;
+            border: 1px solid #bbb6ac;
+            border-radius: 6px;
+        }
+        .submit_form{
+            text-align: center;
+        }
+        .btn{
+            margin-top: 13px;
+            padding: 8px 3px 9px 3px;
+            background: white;
+            border: 1px solid #e2dfdf;
+        }
+        .btn_sign_up{
+            background: skyblue;
+            color: white;
+            border: 1px solid skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Đăng ký thành viên</div>
+        <div class="note">Để đăng ký thành viên, bạn cần khai báo tất cả các ô trống dưới đây</div>
+        <div class="sign_up">
+            <form>
+                <fieldset class="information">
+                    <input name="fname" type="text" placeholder="Họ và tên đệm"><br>
+                    <input name="lname" type="text" placeholder="Tên"><br>
+                    <input name="username" type="text" placeholder="Tên đăng nhập"><br>
+                    <input name="email" type="email" placeholder="Email"><br>
+                    <input name="password" type="password" id="password" placeholder="Mật khẩu"><br>
+                    <input name="re-password" type="password" id="re-password" placeholder="Nhập lại mật khẩu"><br>
+                </fieldset>
+                <fieldset class="choose_gender">
+                    <label class="col-40">Giới tính</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">N/A</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Nam</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label><br>
+                </fieldset>
+                <fieldset class="information">
+                    <input name="birth_day" type="date" placeholder="Ngày tháng năm sinh"><br>
+                    <textarea>Chữ ký </textarea><br>
+                    <input list="question" name="question" placeholder="Câu hỏi bảo mật">
+                    <datalist id="question">
+                        <option value="Bạn có người yêu chưa"></option>
+                        <option value="Size quần sịp "></option>
+                    </datalist><br>
+                    <input type="text" name="answer" placeholder="Trả lời câu hỏi"><br>
+                </fieldset>
+                <fieldset class="submit_form">
+                    <input type="checkbox" name="agree">Tôi đồng ý với <button>Quy định đăng ký thành viên</button><br/>
+                    <input class="btn" type="reset" value="Thiết lập lại">
+                    <input class="btn btn_sign_up" type="submit" value="Đăng ký thành viên">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
