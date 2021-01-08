@@ -8,7 +8,7 @@ table{
     border: none;
 }
 .img{
-    background-image: url(image/ban-lam-viec.jpg);
+    background-image: url(image\ban-lam-viec.jpg);
     width: 650px;
     height: 475px;
     margin-left: 10px;

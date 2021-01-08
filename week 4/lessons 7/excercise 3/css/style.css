@@ -18,7 +18,7 @@ table{
     color: white;
     padding-left: 10px;
 }
-.bti{
+.check{
     margin-top: -33px;
 }
 footer{
@@ -26,15 +26,16 @@ footer{
     height: 100px;
     background-color: rgb(80, 79, 79);
 }
-button{
+.number{
+    text-align: center;
     color: white;
     background-color: blue;
     border: none;
     width: 200px;
     height: 40px;
     font-size: 30px;
+
 }
 .copy{
     margin-left: 700px;
-    line-height: 40px;
 }
