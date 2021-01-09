@@ -1,0 +1,73 @@
+body{
+    border: 5px solid blue;
+    margin: auto;
+    width: 80%;
+    height: 500px;
+}
+table{
+    border: none;
+}
+.img{
+    background-image: url(../image/ban-lam-viec.jpg);
+    background-size: cover;
+    width: 650px;
+    height: 475px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.title-cv{
+	width: 45%;
+	color: white;
+	height: 130px;
+	position: relative;
+	top: 55%;
+    left: 5%;
+    background: rgb(68, 66, 66);
+    padding: 10px;
+}
+.title-cv hr{
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    float: left;
+}
+.title-cv p{
+    margin-top: 5px;
+    font-size: 13px;
+}
+.information{
+    width: 30%;
+    margin-left: 20px;
+    color: blue;
+}
+.information input{
+    width: 300px;
+    margin-top: 10px;
+    height: 25px;
+}
+.btn p{
+    width: 307px;
+    background-color: rgb(83, 161, 51);
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+.information a{
+    color: red;
+}
+.question{
+    text-align: center;
+    color: rgb(129, 125, 125);
+    margin-left: 30px;
+}
+.login{
+    border: 1px solid rgb(82, 81, 81);
+    width: 300px;
+    margin-top: 20px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+}

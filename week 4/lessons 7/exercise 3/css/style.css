@@ -21,21 +21,23 @@ table{
 .check{
     margin-top: -33px;
 }
-footer{
-    width: 100%;
-    height: 100px;
-    background-color: rgb(80, 79, 79);
-}
-.number{
+.end p{
+    width: 150px;
+    background-color: #7986CB;
     text-align: center;
+    font-size: 25px;
+    padding: 6px;
     color: white;
-    background-color: blue;
-    border: none;
-    width: 200px;
-    height: 40px;
-    font-size: 30px;
-
+    margin-left: 70px;
+}
+.end{
+    width: 100%;
+    height: 90px;  
+    padding-top: 1px;
+    background-color: rgb(21, 21,21);
 }
 .copy{
-    margin-left: 700px;
+    float: right;
+    margin-right: 60px;
+    margin-top: -50px;
 }
