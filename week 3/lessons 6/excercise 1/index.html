@@ -21,14 +21,14 @@
         </fieldset>
         <script>
             function multiphy(){
-                var a = document.getElementById("fname");
-                var b = document.getElementById("lname");
-                document.getElementById("result").innerHTML = parseFloat(a.value) * parseFloat(b.value);
+                var a = document.getElementById("fname").value;
+                var b = document.getElementById("lname").value;
+                document.getElementById("result").innerHTML = a * b;
             }
             function divide(){
-                var a = document.getElementById("fname");
-                var b = document.getElementById("lname");
-                document.getElementById("result").innerHTML = parseFloat(a.value) / parseFloat(b.value);               
+                var a = document.getElementById("fname").value;
+                var b = document.getElementById("lname").value;
+                    document.getElementById("result").innerHTML = a / b;              
             }
         </script>
     

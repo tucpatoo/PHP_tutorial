@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>bai 4</title>
 </head>
 <body>
-    <script>
-        var a,b;
-        function ucln(x,y){
-            while(y!=0){
-                if(x>y){
-                    x=x-y;
-                }else{
-                    y=y-x;
-                }
+    <script language="Javascript">
+        var x = prompt("Nhập vào số a ");
+        var y = prompt("Nhập vào số b ");
+        var temp;
+        function UCLN( x, y) {
+            while(y!= 0) {
+                temp = x % y;
+                x = y;
+                y = temp;
             }
             return x;
         }
-        a = prompt("Nhập vào số a ");
-        b = prompt("Nhập vào số b ");
-        document.write("ước chung lớn nhất là: " + ucln(a,b))
-
+        alert("ước chung lớn nhất là: " + UCLN(x,y));
     </script>
 </body>
 </html>
