@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+        <p>Máy tính</p>
+        <p>Số thứ nhất :
+        <input id="fnumber" type="number" required>
+        </p>
+        <p>Số thứ hai :
+        <input id="lnumber" type="number" required>
+        </p>
+        <p>Kết quả :
+        <a id="result" ></a>
+        </p>
+        <p>
+            <button onclick="add()">Cộng</button>
+            <button onclick="subtract()">Trừ</button>
+            <button onclick="multiphy()">Nhân</button>
+            <button onclick="divide()">Chia</button>
+            <button type="reset" onclick="back()">Xóa trắng</button>
+        </p>
+    <script>
+        function add(){
+            document.getElementById("result").innerHTML = Number("fnumber").value + Number("lnumber").value;
+        }
+
+    </script>
+</body>
+</html>

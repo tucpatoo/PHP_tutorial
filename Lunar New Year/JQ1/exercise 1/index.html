@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+</head>
+<body>
+    <div class="form">
+        <div class="row p-5 text-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 p-3"></div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <p class="font-weight-bold">Chu vi và diện tích hình chữ nhật</p>
+                <div class="form-group">
+                    <p>Nhập vào chiều dài:</p>
+                    <input type="number" name="length" id="length"><br/>
+                    <span class="text-danger" id="emptyLength"></span>
+                </div>
+                <div class="form-group">
+                    <p>Nhập vào chiều rộng:</p>
+                    <input type="number" name="width" id="width"><br/>
+                    <span class="text-danger" id="emptyWidth"></span>
+                </div>
+                <button class="btn bg-success mt-3">Tính chu vi và diện tích</button>
+                <div class="perimeter text-success mt-5"></div>
+                <div class="area text-success"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3"></div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                var emptyError = 'Không được để trống';
+                var getLength = $("#length").val();
+                var getWidth = $("#width").val();
+                var getPerimeter = 2 * getLength + getWidth * 2;
+                var getArea = getWidth*getLength;
+                if(getLength == ''){
+                    $('#emptyLength').text(emptyError);
+                }
+                else if(getWidth == ''){
+                    $('#emptyWidth').text(emptyError);
+                }
+                else{
+                    $(".perimeter").text('chu vi la '+getPerimeter+'m');
+                    $('.area').html('dien tich la '+getArea+'m<sup>2</sup>');
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>

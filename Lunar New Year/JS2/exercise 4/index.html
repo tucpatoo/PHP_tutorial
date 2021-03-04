@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex 4</title>
+</head>
+<body>
+	<div class="container">
+		<select id="images">
+			<option value="1">image 1</option>
+			<option value="2">image 2</option>
+			<option value="3">image 3</option>
+			<option value="4">image 4</option>
+			<option value="5">image 5</option>
+		</select>
+		<div class="changeImg">
+			<button type="submit" id="btn-changeImg" onclick="setImageBasedOnSelect()">Change Image</button>
+		</div>
+		<div class="image">
+			<img src="image/image1.png" class="img-fluid" id="imgPlace">
+		</div>
+	</div>	
+		<script type="text/javascript">
+			function setImageBasedOnSelect() {
+				var getImgValue = document.getElementById('images').value;
+				var changeSrcImg = document.getElementById('imgPlace');
+				switch (getImgValue){
+					case "1":
+						changeSrcImg.src = "image/image1.png";
+						break;
+					case "2": 
+						changeSrcImg.src = "image/image2.jpg";
+						break;
+					case "3":
+						changeSrcImg.src = 'image/image3.jpg';
+						break;
+					case "4":
+						changeSrcImg.src = 'image/image4.jpg';
+						break;
+					case "5":
+						changeSrcImg.src = 'image/image5.jpg';
+				}
+			}
+		</script>
+</body>
+</html>

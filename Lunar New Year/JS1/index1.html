@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 1</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Nhập vào số a:");
+        var b = a.trim();
+        if(b != parseInt(b)){
+            alert("Số nhập vào không hợp lệ. Vui lòng nhập lại!!!");
+        }
+        else{
+            if(b>=1 && b<=10 || b>=50 && b<=100){
+            alert(b+ " nằm trong khoảng 1-10 hoặc 50-100");
+        }
+        else{
+            alert(b+ " không nằm trong khoảng 1-10 hoặc 50-100")
+        }
+        }
+    </script>
+</body>
+</html>

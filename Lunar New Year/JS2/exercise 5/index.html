@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 5 (JS2)</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+<body style="text-align: center;">
+		<form>			
+			<input type="checkbox" name="checkAll" id="checkAll">Check All<br/>
+			<input type="checkbox" name="checkItem1" class="checkedItem">Item1<br/>
+			<input type="checkbox" name="checkItem2" class="checkedItem">Item2<br/>
+			<input type="checkbox" name="checkItem3" class="checkedItem">Item3<br/>
+			<input type="checkbox" name="checkItem4" class="checkedItem">Item4<br/>
+		</form>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#checkAll').click(function () {
+					var $clickCheckAll = $('.checkedItem');
+					$clickCheckAll.prop('checked', true);
+				});
+			});
+            
+		</script>
+	</div>
+</body>
+</html>
