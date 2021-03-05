@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 </head>
 <body>
+    <form class="text-center" action="#" method="">
         <p>Máy tính</p>
         <p>Số thứ nhất :
         <input id="fnumber" type="number" required>
@@ -14,21 +20,46 @@
         <p>Số thứ hai :
         <input id="lnumber" type="number" required>
         </p>
-        <p>Kết quả :
-        <a id="result" ></a>
-        </p>
+        <p>Kết quả :</p>
+        <span id="result_add"></span>
+        <span id="result_subtract"></span>
+        <span id="result_multiphy"></span>
+        <span id="result_divide"></span>
         <p>
-            <button onclick="add()">Cộng</button>
-            <button onclick="subtract()">Trừ</button>
-            <button onclick="multiphy()">Nhân</button>
-            <button onclick="divide()">Chia</button>
-            <button type="reset" onclick="back()">Xóa trắng</button>
+            <button id="add">Cộng</button>
+            <button id="subtract">Trừ</button>
+            <button id="multiphy">Nhân</button>
+            <button id="divide">Chia</button>
+            <button type="reset">Xóa trắng</button>
         </p>
-    <script>
-        function add(){
-            document.getElementById("result").innerHTML = Number("fnumber").value + Number("lnumber").value;
-        }
-
-    </script>
+    </form>
+        <script>
+            $(document).ready(function(){
+                $('#add').click(function(){
+                    var a = $('#fnumber').val();
+                    var b = $('#lnumber').val();
+                    var add = a+b;
+                    $('#result_add').html('tong la: ' + add);
+                })
+                $('#subtract').click(function(){
+                    var a = $('#fnumber').val();
+                    var b = $('#lnumber').val();
+                    var subtract = a-b;
+                    $('#result_subtract').text('hieu la: ' + subtract);
+                })
+                $('#multiphy').click(function(){
+                    var a = $('#fnumber').val();
+                    var b = $('#lnumber').val();
+                    var multiphy = a*b;
+                    $('#result_multiphy').text('tich la: ' + multiphy);
+                })
+                $('#divide').click(function(){
+                    var a = $('#fnumber').val();
+                    var b = $('#lnumber').val();
+                    var divide = a/b;
+                    $('#result_divide').text('thuong la: ' + divide);
+                })
+            })
+        </script>
 </body>
 </html>
