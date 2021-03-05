@@ -17,7 +17,7 @@
             <input type="text" id="name" name="name"><br/>
             <span class="text-danger" id="name_error"></span>
             <label>Email:</label>
-            <input type="text" id="email" name="email"><br/>
+            <input type="email" id="email" name="email"><br/>
             <span class="text-danger" id="empty_error"></span>
             <span class="text-danger" id="email_error"></span>
             <label>Country</label>
@@ -45,17 +45,13 @@
                 if(getName == ''){
                     $('#name_error').text(emptyError);
                     $('#name').css('border-color', 'red').focus();
-                }
-                else if(getEmail == ''){
+                }else if(getEmail == ''){
                     $('#empty_error').text(emptyError);
                     $('#email').css('border-color', 'red').focus();
-                }
-                else if(getCountry == '-1'){
+                }else if(getCountry == '-1'){
                     $('#country_error').text(emptyError);
                     $('#country').css('border-color', 'red').focus();
-                }
-                else
-                {
+                }else{
                     $('#info_name').text('Name:' +getName);
                     $('#info_email').text('Email:'+getEmail);
                     $('info_country').text('COuntry:'+getCountry);

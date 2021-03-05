@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Ex_05</title>
-        <style>
-            body{
-                text-align: center;
-            }
-            #notification {
-                color: red;
-            }
-            #result {
-                color: green;
-            }
-        </style>
-    </head>
-    <body>
-        <form action="#" method="post" onsubmit="return validateForm()">
-            <label>Name</label>
-            <input type="text" id="name" required=""  oninvalid="this.setCustomValidity('Không để trống trường này')" oninput="setCustomValidity('')" /><br />
-            <label>Email</label>
-            <input type="text" id="email" required=""  oninvalid="this.setCustomValidity('Không để trống trường này')" oninput="setCustomValidity('')" /><br />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+</head>
+<body>
+    <form action="#" method="" class="text-center" >
+            <label>Name:</label>
+            <input type="text" id="name" name="name"><br/>
+            <span class="text-danger" id="name_error"></span>
+            <label>Email:</label>
+            <input type="email" id="email" name="email"><br/>
+            <span class="text-danger" id="empty_error"></span>
+            <span class="text-danger" id="email_error"></span>
             <label>Country</label>
-            <select name="country" id="country" required oninvalid="this.setCustomValidity('Cần phải chọn Country')" oninput="setCustomValidity('')">
-                <option selected value="">Select-contry</option>
-                <option value="Viet Nam">Viet Nam</option>
-                <option value="Japan">Japan</option>
-                <option value="USA">USA</option>
-            </select>
-            <br />
-            <input type="submit" value="Send-info" />
-        </form>
-        <div id="notification"></div>
-        <div id="result"></div>
-    </body>
+            <select id="country">
+                <option value="-1" selected>Select-Country</option>
+                <option value="1">Viet Nam</option>
+                <option value="2">Japan</option>
+                <option value="3">USA</option>
+            </select><br/>
+            <span class="text-danger" id="country_error"></span>
+        <button id="btn_sendinfo bg-light">Send info</button>
+        <span class="text-success" id="info_name"></span>
+        <span class="text-success" id="info_email"></span>
+        <span class="text-success" id="info_country"></span>
+    </form>
     <script>
-        function regexEmail(email) {
-            re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
-        }
-        function validateForm() {
-            name = document.getElementById("name").value;
-            email = document.getElementById("email").value;
-            country = document.getElementById("country").value;
-            if (regexEmail(email)) {
-                document.getElementById("result").innerHTML = "" + "Name:" + name + "<br>" + "Email:" + email + "<br>" + "Country:" + country;
-            } else {
-                document.getElementById("notification").innerText = "Email không đúng định dạng";
-            }
-            return false;
-        }
+        $(document).ready(function(){
+            $('#btn_sendinfo').click(function(){
+                var emptyError = 'Không được để trống trường này';
+                var checkEmail = 'Email chưa đúng định dạng';
+                var checkCountry = 'Cần phải chọn Country';
+                var getName = $('#name').val();
+                var getEmail = $('#email').val();
+                var getCountry = $('#country').val();
+                if(getName == ''){
+                    $('#name_error').text(emptyError);
+                    $('#name').css('border-color', 'red').focus();
+                }else if(getEmail == ''){
+                    $('#empty_error').text(emptyError);
+                    $('#email').css('border-color', 'red').focus();
+                }else if(getCountry == '-1'){
+                    $('#country_error').text(emptyError);
+                    $('#country').css('border-color', 'red').focus();
+                }else{
+                    $('#info_name').text('Name:' +getName);
+                    $('#info_email').text('Email:'+getEmail);
+                    $('info_country').text('COuntry:'+getCountry);
+                }
+            });
+        });
     </script>
+</body>
 </html>

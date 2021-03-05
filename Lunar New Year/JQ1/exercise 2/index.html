@@ -27,14 +27,14 @@
             $('.btn').click(function(){
                 var getNumber = $('#number').val();
                 var i;
-                var evenNumber = '';
-                var oddNumber = '';
+                var evenNumber = ' ';
+                var oddNumber = ' ';
                 for(i=1;i<=getNumber;i++){
                 if(i%2==0){
-                    evenNumber += i+',';
+                    evenNumber += i+' ';
                 }
                 else{
-                    oddNumber += i+',';
+                    oddNumber += i+' ';
                 }
             }
             if(getNumber == ''){

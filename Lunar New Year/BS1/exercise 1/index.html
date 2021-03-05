@@ -15,18 +15,20 @@
         <form action="#" role="form" id="reg-form" method="post" onsubmit="return validate()">
             <div class="d-flex flex-column">
                 <label for="js-first-name">First Name</label>
-                <input name="first-name" id="js-first-name">
+                <input name="first-name" id="first-name">
+                <span class="text-danger" id="emptyFirstName"></span>
             </div>
             <div class="d-flex flex-column">
-                <label for="js-last-name">Last Name</label>
-                <input name="last-name" id="js-last-name">
+                <label for="last-name">Last Name</label>
+                <input name="last-name" id="last-name">
+                <span class="text-danger" id="emptyLastName"></span>
             </div>
             <div class="pt-2 pb-2">
-                <input type="radio" name="gender" value="male" id="js-male-gender">Male
-                <input type="radio" name="gender" value="female" id="js-female-gender">Female
+                <input type="radio" name="gender" value="male" id="male-gender">Male
+                <input type="radio" name="gender" value="female" id="female-gender">Female
             </div>
             <div class="d-flex flex-column">
-                <input type="date" name="date" id="js-date">
+                <input type="date" name="date" id="date">
             </div>
             <div class="d-flex flex-row pt-3">
                 <button class="btn btn-primary">Submit</button>
@@ -36,23 +38,22 @@
     </div>
 </body>
 <script>
-    $("#reg-form").validate({
-        rules: {
-            "first-name": "required",
-            "last-name": "required",
-        },
-        messages: {
-            "first-name": "<div class='text-danger'>Trường này bắt buộc nhập</div>",
-            "last-name": "<div class='text-danger'>Trường này bắt buộc nhập</div>",
-        }
-    });
     function validate(){
         date='';
         gender='';
-        firstName = $("#js-first-name").val();
-        lastName = $("#js-last-name").val();
+        firstName = $("#first-name").val();
+        lastName = $("#last-name").val();
         gender =$( "input:checked" ).val()
-        date = $("#js-date").val();
+        date = $("#date").val();
+        if(firstName==''){
+            $('#emptyFirstName').text('Không được để trống');
+            $('#first-name').css('border-color', 'red');
+        }else if(lastName==''){
+            $('#emptyLastName').text('Không được để trống');
+            $('#last-name').css('border-color', 'red');
+        }else{
+            $('#result').html(firstName+'<br>'+lastName+'<br>'+date+'<br>'+gender);
+        }
         if(firstName && lastName){
             $('#result').html(firstName+'<br>'+lastName+'<br>'+date+'<br>'+gender);
         }else {
